@@ -6,8 +6,9 @@ using Utility;
 public class Brain : MonoBehaviour
 {
     [SerializeField] private StateSO defaultState;
-    [SerializeField] private List<TransitionData> transitions;
-    [SerializeField] private List<TransitionData> anyTransitions;
+    [SerializeField] private List<TransitionSO> transitions;
+    [SerializeField] private List<TransitionSO> anyTransitions;
+    
     private StateSO _currentState;
     private StateMemory _memory;
     
@@ -27,7 +28,7 @@ public class Brain : MonoBehaviour
         _currentState.Enter(_memory);
     }
 
-    public void Tick()
+    private void Update()
     {
         _currentState.Tick(_memory);
         CheckTransitions();
@@ -37,17 +38,17 @@ public class Brain : MonoBehaviour
     {
         foreach (var transition in transitions)
         {
-            if (!transition.Decision.Test()) continue;
+            if (!transition.Data.Decision.Test(_memory)) continue;
             
-            SetState(transition.From, transition.To);
+            SetState(transition.Data.From, transition.Data.To);
             return;
         }
 
         foreach (var transition in anyTransitions)
         {
-            if (!transition.Decision.Test()) continue;
+            if (!transition.Data.Decision.Test(_memory)) continue;
 
-            SetState(_currentState, transition.To);
+            SetState(_currentState, transition.Data.To);
             return;
         }
     }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class TransitionData
 {
     [SerializeField] private StateSO from;
-    public StateSO From => From;
+    public StateSO From => from;
     [SerializeField] private StateSO to;
     public StateSO To => to;
     [SerializeField] private DecisionSO decision;
-    public DecisionSO Decision => Decision;
+    public DecisionSO Decision => decision;
 }

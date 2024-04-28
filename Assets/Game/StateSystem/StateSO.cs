@@ -10,7 +10,7 @@ public class StateSO : ScriptableObject
     {
         foreach (var component in components)
         {
-            component.Enter(memory);
+            component.Enter(this, memory);
         }
     }
     
@@ -18,7 +18,7 @@ public class StateSO : ScriptableObject
     {
         foreach (var component in components)
         {
-            component.Tick(memory);
+            component.Tick(this, memory);
         }
     }
     
@@ -26,7 +26,7 @@ public class StateSO : ScriptableObject
     {
         foreach (var component in components)
         {
-            component.Exit(memory);
+            component.Exit(this, memory);
         }
     }
 }
