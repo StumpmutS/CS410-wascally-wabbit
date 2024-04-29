@@ -22,7 +22,9 @@ public class PatrolStateComponent : StateComponentSO
 
     private void NewDestination(MovementAgent agent)
     {
-        agent.SetDestination(GenerateDestination());
+        var destination = GenerateDestination();
+        destination.y = Terrain.activeTerrain.SampleHeight(destination);
+        agent.SetDestination(destination);
     }
 
     private Vector3 GenerateDestination()

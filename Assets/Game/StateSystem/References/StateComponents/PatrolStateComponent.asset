@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8983172629704442acf5b1ed9a753f87, type: 3}
   m_Name: PatrolStateComponent
   m_EditorClassIdentifier: 
-  patrolCenter: {x: 616, y: 57.09, z: 446.77}
+  patrolCenter: {x: 616, y: 0, z: 446.77}
   patrolExtents: {x: 50, y: 0, z: 50}
