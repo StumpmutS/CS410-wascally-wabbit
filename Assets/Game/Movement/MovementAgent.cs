@@ -8,6 +8,8 @@ public class MovementAgent : MonoBehaviour
     [SerializeField] private float destinationReachOffset = .1f;
     [SerializeField] private NavMeshAgent agent;
 
+    private bool _pathSet;
+    
     public UnityEvent<MovementAgent> OnDestinationReached = new();
     
     public void SetDestination(Vector3 point)
@@ -22,12 +24,18 @@ public class MovementAgent : MonoBehaviour
 
     private void Update()
     {
-        if (!agent.hasPath || agent.pathPending) return;
+        if (!agent.enabled) return;
+        if (agent.pathPending) return;
+        if (agent.hasPath) _pathSet = true;
+        if (!_pathSet) return;
+        if (agent.remainingDistance >= destinationReachOffset) return;
+        FinishPath();
+    }
 
-        if ((agent.destination - transform.position).sqrMagnitude <= destinationReachOffset * destinationReachOffset)
-        {
-            OnDestinationReached.Invoke(this);
-            agent.ResetPath();
-        }
+    private void FinishPath()
+    {
+        agent.ResetPath();
+        _pathSet = false;
+        OnDestinationReached.Invoke(this);
     }
 }

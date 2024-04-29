@@ -62,10 +62,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultState: {fileID: 11400000, guid: b603d5218fafe4a44ba43a7b50303b37, type: 2}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: 32023aba6bf31164f9e14f64b1614cf6, type: 2}
   anyTransitions:
   - {fileID: 11400000, guid: 2a9fe96f8dbce1a429c0405b2a09c862, type: 2}
-  - {fileID: 11400000, guid: 32023aba6bf31164f9e14f64b1614cf6, type: 2}
 --- !u!195 &2386723362740720350
 NavMeshAgent:
   m_ObjectHideFlags: 0

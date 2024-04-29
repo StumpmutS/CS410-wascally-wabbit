@@ -27,9 +27,10 @@ public class PatrolStateComponent : StateComponentSO
 
     private Vector3 GenerateDestination()
     {
-        return patrolCenter + new Vector3(Random.Range(-patrolExtents.x, patrolExtents.x),
+        return patrolCenter + new Vector3(
             Random.Range(-patrolExtents.x, patrolExtents.x),
-            Random.Range(-patrolExtents.x, patrolExtents.x));
+            Random.Range(-patrolExtents.y, patrolExtents.y),
+            Random.Range(-patrolExtents.z, patrolExtents.z));
     }
 
     protected override void HandleExit(StateMemory memory)

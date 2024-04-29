@@ -19,13 +19,14 @@ public class Brain : MonoBehaviour
         _currentState.Enter(_memory);
     }
 
-    private void SetState(StateSO from, StateSO to)
+    private bool TrySetState(StateSO from, StateSO to)
     {
-        if (_currentState.GetType() != from.GetType()) return;
+        if (_currentState != from) return false;
 
         _currentState.Exit(_memory);
         _currentState = to;
         _currentState.Enter(_memory);
+        return true;
     }
 
     private void Update()
@@ -40,16 +41,14 @@ public class Brain : MonoBehaviour
         {
             if (!transition.Data.Decision.Test(_memory)) continue;
             
-            SetState(transition.Data.From, transition.Data.To);
-            return;
+            if (TrySetState(transition.Data.From, transition.Data.To)) return;
         }
 
         foreach (var transition in anyTransitions)
         {
             if (!transition.Data.Decision.Test(_memory)) continue;
 
-            SetState(_currentState, transition.Data.To);
-            return;
+            if (TrySetState(_currentState, transition.Data.To)) return;
         }
     }
 }
