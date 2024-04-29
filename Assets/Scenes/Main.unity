@@ -2567,7 +2567,7 @@ MonoBehaviour:
   runSpeed: 8
   jumpPower: 7
   gravity: 10
-  lookSpeed: 3
+  lookSpeed: 8
   lookXLimit: 45
 --- !u!143 &1639525606
 CharacterController:
