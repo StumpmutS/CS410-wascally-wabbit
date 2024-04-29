@@ -7,23 +7,39 @@ public abstract class StateComponentSO : ScriptableObject
     private static HashSet<Type> _defaultHashset = new();
     protected virtual HashSet<Type> MemorizedComponentTypes => _defaultHashset;
     
-    public virtual void Enter(StateSO state, StateMemory memory)
+    public void Enter(StateMemory memory)
     {
-        var retrieved = memory.RetrieveMemory(state);
+        // Store memorized components in memory
+        var retrieved = memory.RetrieveMemory(this);
         foreach (var type in MemorizedComponentTypes)
         {
             retrieved[type] = memory.GetComponent(type);
         }
+        
+        HandleEnter(memory);
     }
-    
-    public virtual void Tick(StateSO state, StateMemory memory) { }
 
-    public virtual void Exit(StateSO state, StateMemory memory)
+    /// <summary>
+    /// Called after memorized components are found
+    /// </summary>
+    protected virtual void HandleEnter(StateMemory memory) { }
+    
+    public virtual void Tick(StateMemory memory) { }
+
+    public void Exit(StateMemory memory)
     {
-        var retrieved = memory.RetrieveMemory(state);
+        HandleExit(memory);
+     
+        // Clear memory
+        var retrieved = memory.RetrieveMemory(this);
         foreach (var type in MemorizedComponentTypes)
         {
             retrieved.Remove(type);
         }
     }
+    
+    /// <summary>
+    /// Called before memorized components are cleared
+    /// </summary>
+    protected virtual void HandleExit(StateMemory memory) { }
 }

@@ -8,9 +8,9 @@ public class TargetedMoveStateComponent : StateComponentSO
     private HashSet<Type> _memorizedComponentTypes = new() { typeof(ITargetFinder), typeof(MovementAgent) };
     protected override HashSet<Type> MemorizedComponentTypes => _memorizedComponentTypes;
 
-    public override void Tick(StateSO state, StateMemory memory)
+    public override void Tick(StateMemory memory)
     {
-        var retrieved = memory.RetrieveMemory(state);
+        var retrieved = memory.RetrieveMemory(this);
         if (!retrieved.TryGetFromType(out ITargetFinder targetFinder) || 
             !retrieved.TryGetFromType(out MovementAgent agent)) return;
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public static class MemoryHelpers
 {
@@ -17,6 +18,9 @@ public static class MemoryHelpers
 
         result = memory.GetComponent<T>();
         retrieved[typeof(T)] = result;
-        return result != null;
+        
+        if (result != null) return true;
+        Debug.LogWarning($"Could not find component of type \"{typeof(T)}\" on game object \"{memory.gameObject}\"");
+        return false;
     }
 }
