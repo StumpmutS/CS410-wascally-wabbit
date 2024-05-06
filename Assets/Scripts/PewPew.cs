@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 
 public class PewPew : MonoBehaviour
 {
+    [SerializeField] ParticleSystem bang = null;
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
@@ -29,6 +31,13 @@ public class PewPew : MonoBehaviour
 
             var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawn.forward * bulletSpeed;
+            
+            Bang();
         }
+    }
+
+    public void Bang()
+    {
+        bang.Play();
     }
 }
