@@ -9,7 +9,9 @@ public class GameEnding : MonoBehaviour
     public float fadeDuraction = 1f;
     public GameObject player;
 
-    bool PlayerCaught = false;
+    public bool PlayerCaught = false;
+    
+    public Timer timeScript;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,6 +25,10 @@ public class GameEnding : MonoBehaviour
     void Update()
     {
         if (PlayerCaught)
+        {
+            EndLevel(true);
+        }
+        if (timeScript.outTime)
         {
             EndLevel(true);
         }
