@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -17,6 +18,8 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            Score.instance.current += 1;
+            Score.instance.updateScore();
         }
     }
 }
