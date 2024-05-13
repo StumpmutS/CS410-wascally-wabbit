@@ -1,20 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD:Assets/Art/Gun/VintageRifle/Model/ammo_44_40_lods.asset
---- !u!43 &-1768546159089058385
-=======
---- !u!43 &-5987677381621421502
->>>>>>> 32e33089115a2e3b2bf01b58d7a589469a5208ff:Assets/Art/VintageRifle/Model/ammo_44_40_lods.asset
+--- !u!43 &-8538936116213333946
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Art/Gun/VintageRifle/Model/ammo_44_40_lods.asset
   m_Name: 30_30_ammo LOD1
-=======
-  m_Name: 30_30_ammo LOD2
->>>>>>> 32e33089115a2e3b2bf01b58d7a589469a5208ff:Assets/Art/VintageRifle/Model/ammo_44_40_lods.asset
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -194,31 +186,23 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: -7511558181221131132, guid: e662975a3bb12465abe336662d89a858, type: 3}
+  - {fileID: 0}
   lod1:
-  - {fileID: -3781263097691661289, guid: e662975a3bb12465abe336662d89a858, type: 3}
+  - {fileID: 0}
   lod2:
-  - {fileID: 7045959682534098812, guid: e662975a3bb12465abe336662d89a858, type: 3}
+  - {fileID: 0}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
-<<<<<<< HEAD:Assets/Art/Gun/VintageRifle/Model/ammo_44_40_lods.asset
---- !u!43 &6006993497660220806
-=======
---- !u!43 &6813448650112544162
->>>>>>> 32e33089115a2e3b2bf01b58d7a589469a5208ff:Assets/Art/VintageRifle/Model/ammo_44_40_lods.asset
+--- !u!43 &2439145793426906927
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Art/Gun/VintageRifle/Model/ammo_44_40_lods.asset
   m_Name: 30_30_ammo LOD2
-=======
-  m_Name: 30_30_ammo LOD1
->>>>>>> 32e33089115a2e3b2bf01b58d7a589469a5208ff:Assets/Art/VintageRifle/Model/ammo_44_40_lods.asset
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

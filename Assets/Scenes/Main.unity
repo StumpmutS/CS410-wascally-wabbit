@@ -539,6 +539,7 @@ Transform:
   - {fileID: 656800965}
   - {fileID: 510149996}
   - {fileID: 1183762606}
+  - {fileID: 539273642}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &510149996 stripped
@@ -546,6 +547,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1694312267256637961, guid: 8383e1ddb85a97f4880d13656c856c3c,
     type: 3}
   m_PrefabInstance: {fileID: 1166791199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &539273642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3279391863838647796, guid: 787afbf13dcf88f4da317335fd51d480,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679495583}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &563203988
 GameObject:
@@ -1171,7 +1178,7 @@ Transform:
   m_GameObject: {fileID: 934778865}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1249,7 +1256,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934778865}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8821195808640009433, guid: 24fc2c3e62c52bf4e9e63fd980b8e85d, type: 3}
 --- !u!1001 &968660518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1561,7 +1568,7 @@ Transform:
   m_GameObject: {fileID: 1106843243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.414, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6906,7 +6913,6 @@ MonoBehaviour:
   player: {fileID: 1698363807}
   PlayerCaught: 0
   timeScript: {fileID: 1938356792}
-<<<<<<< HEAD
 --- !u!95 &1639525609
 Animator:
   serializedVersion: 5
@@ -7009,14 +7015,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5170783383158231843, guid: 787afbf13dcf88f4da317335fd51d480,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254298345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787afbf13dcf88f4da317335fd51d480, type: 3}
-=======
->>>>>>> 32e33089115a2e3b2bf01b58d7a589469a5208ff
 --- !u!1 &1698363807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7636511328284032659, guid: 1988418bcbbd1184d99e8aba25ee9c64,
