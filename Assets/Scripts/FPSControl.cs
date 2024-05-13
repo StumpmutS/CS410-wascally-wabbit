@@ -1,3 +1,4 @@
+using System.Diagnostics;
 /*Credit: https://github.com/dustinmorman/FPSControllerTutorial*/
 using System.Collections;
 using System.Collections.Generic;
@@ -20,12 +21,24 @@ public class FPSControl : MonoBehaviour
 
     CharacterController characterController;
 
+    // animation variables
+    private Animator animator;
+    private bool isRunning;
+
+
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        //animation initialization
+        animator = GetComponentInChildren<Animator>();
+        if(animator == null)
+        {
+            UnityEngine.Debug.LogError("Animator not found\n");
+        }
     }
 
     // Update is called once per frame
@@ -41,10 +54,17 @@ public class FPSControl : MonoBehaviour
         float moveDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
+        //animation update
+        bool isMoving = (curSpeedX != 0f || curSpeedY != 0f);
+        animator.SetBool("isWalking", isMoving);
+        animator.SetBool("isRunning", isMoving && isRunning);
+
+
         //Jump
         if (Input. GetButton("Jump") && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+            animator.SetTrigger("isJumping");
         }
         else
         {
