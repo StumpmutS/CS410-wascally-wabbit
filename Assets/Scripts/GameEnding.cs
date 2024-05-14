@@ -9,6 +9,7 @@ public class GameEnding : MonoBehaviour
     public bool PlayerCaught = false;
     
     public Timer timeScript;
+    public Score scoreScript;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,19 +24,30 @@ public class GameEnding : MonoBehaviour
     {
         if (PlayerCaught)
         {
-            EndLevel(true);
+            EndLevel(true, false);
         }
         if (timeScript.outTime)
         {
-            EndLevel(true);
+            EndLevel(true, false);
+        }
+        if (scoreScript.current == scoreScript.win)
+        {
+            EndLevel(true, true);
         }
     }
 
-    void EndLevel(bool Restart)
+    void EndLevel(bool Restart, bool win)
     {
         if(Restart)
         {
-            SceneManager.LoadScene(0);
+            if(win)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }
