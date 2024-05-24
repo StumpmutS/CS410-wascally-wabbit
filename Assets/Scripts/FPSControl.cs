@@ -23,7 +23,9 @@ public class FPSControl : MonoBehaviour
 
     // animation variables
     private Animator animator;
-    private bool isRunning;
+    public bool isRunning = false;
+    public bool isWalking = false;
+    public bool isJumping = false;
 
 
     // Start is called before the first frame update
@@ -34,7 +36,7 @@ public class FPSControl : MonoBehaviour
         Cursor.visible = false;
 
         //animation initialization
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         if(animator == null)
         {
             UnityEngine.Debug.LogError("Animator not found\n");
@@ -55,16 +57,15 @@ public class FPSControl : MonoBehaviour
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
         //animation update
-        bool isMoving = (curSpeedX != 0f || curSpeedY != 0f);
-        animator.SetBool("isWalking", isMoving);
-        animator.SetBool("isRunning", isMoving && isRunning);
-
+        bool isWalking = (curSpeedX != 0f || curSpeedY != 0f);
+        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isRunning", isWalking && isRunning);
+        animator.SetBool("isJumping", isJumping);
 
         //Jump
-        if (Input. GetButton("Jump") && characterController.isGrounded)
+        if (Input.GetButton("Jump") && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
-            animator.SetTrigger("isJumping");
         }
         else
         {

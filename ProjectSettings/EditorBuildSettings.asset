@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 956da9e7e623a472c887b7272e0b7c09
   - enabled: 1
-    path: Assets/Scenes/Main.unity
+    path: Assets/Scenes/Level 1.unity
     guid: 08c721a8c1a4c9f4e93492aefdfdebde
   - enabled: 1
-    path: Assets/Scenes/2.unity
+    path: Assets/Scenes/Level 2.unity
     guid: f620c1b2d8325204b8752210305596ae
   - enabled: 0
     path: Assets/Art/Characters/Player/LowpolyCharacterRio/Scenes/DemoScene.unity
