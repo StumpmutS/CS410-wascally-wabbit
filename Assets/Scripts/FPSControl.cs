@@ -60,13 +60,20 @@ public class FPSControl : MonoBehaviour
         bool isWalking = (curSpeedX != 0f || curSpeedY != 0f);
         animator.SetBool("isWalking", isWalking);
         animator.SetBool("isRunning", isWalking && isRunning);
-        animator.SetBool("isJumping", isJumping);
 
         //Jump
         if (Input.GetButton("Jump") && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+            isJumping = true;
+            animator.SetBool("isJumping", isJumping);
         }
+        else if (characterController.isGrounded)
+        {
+            isJumping = false;
+            animator.SetBool("isJumping", isJumping);
+        }
+
         else
         {
             moveDirection.y = moveDirectionY;
