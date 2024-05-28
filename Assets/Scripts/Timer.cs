@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     public float timeLeft = 300;
     public TMP_Text timerTxt;
-    public bool outTime = false;
 
+    public UnityEvent OnTimerFinish = new();
+    
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        if(timeLeft > 0)
-        {
-            timeLeft -= Time.deltaTime;
-            updateTimer(timeLeft);
-        }
-        else
-        {
-            outTime = true;
-        }
+        timeLeft -= Time.deltaTime;
+        UpdateTimer(timeLeft);
+        
+        if (timeLeft <= 0) OnTimerFinish.Invoke();
     }
 
-    void updateTimer(float currentTime)
+    private void UpdateTimer(float currentTime)
     {
         currentTime += 1;
         float minutes = Mathf.FloorToInt(currentTime / 60);

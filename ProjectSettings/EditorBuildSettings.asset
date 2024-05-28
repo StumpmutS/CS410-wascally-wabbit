@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: f620c1b2d8325204b8752210305596ae
-  - enabled: 0
-    path: Assets/Art/Characters/Player/LowpolyCharacterRio/Scenes/DemoScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Progression.unity
+    guid: a1b7dd31215ddcc4db44887ddc5533ae
   m_configObjects: {}

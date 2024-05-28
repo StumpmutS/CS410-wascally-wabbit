@@ -18,8 +18,8 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            Score.instance.current += 1;
-            Score.instance.updateScore();
+            ScoreManager.Instance.Current += 1;
+            ScoreManager.Instance.UpdateScore();
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 /*Credit: https://github.com/dustinmorman/FPSControllerTutorial*/
 using System.Collections;
@@ -7,40 +8,36 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FPSControl : MonoBehaviour
 {
-    public Camera playerCamera;
-    public float walkSpeed = 3f;
-    public float runSpeed = 5f;
-    public float jumpPower = 5f;
-    public float gravity = 10f;
-
-    public float lookSpeed = 8f;
-    public float lookXLimit = 45f;
-
-    Vector3 moveDirection = Vector3.zero;
-    float rotationX = 0;
-
-    CharacterController characterController;
-
-    // animation variables
-    private Animator animator;
-    public bool isRunning = false;
-    public bool isWalking = false;
-    public bool isJumping = false;
-
-
+    [SerializeField] private StatManager statManager;
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private float gravity = 10f;
+    [SerializeField] private float lookSpeed = 8f;
+    [SerializeField] private float lookXLimit = 45f;
+    
+    private Animator _animator;
+    private CharacterController _characterController;
+    
+    private float _rotationX;
+    private float _walkSpeed;
+    private float _runSpeed;
+    private float _jumpPower;
+    
+    private bool _isJumping;
+    private Vector3 _moveDirection = Vector3.zero;
+    
     // Start is called before the first frame update
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
+        _characterController = GetComponent<CharacterController>();
+        
         //animation initialization
-        animator = GetComponent<Animator>();
-        if(animator == null)
+        _animator = GetComponent<Animator>();
+        if(_animator == null)
         {
             UnityEngine.Debug.LogError("Animator not found\n");
         }
+        
+        RefreshStats();
     }
 
     // Update is called once per frame
@@ -51,44 +48,51 @@ public class FPSControl : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical");
-        float curSpeedY = (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal");
-        float moveDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        float curSpeedX = (isRunning ? _runSpeed : _walkSpeed) * Input.GetAxis("Vertical");
+        float curSpeedY = (isRunning ? _runSpeed : _walkSpeed) * Input.GetAxis("Horizontal");
+        float moveDirectionY = _moveDirection.y;
+        _moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
         //animation update
         bool isWalking = (curSpeedX != 0f || curSpeedY != 0f);
-        animator.SetBool("isWalking", isWalking);
-        animator.SetBool("isRunning", isWalking && isRunning);
+        _animator.SetBool("isWalking", isWalking);
+        _animator.SetBool("isRunning", isWalking && isRunning);
 
         //Jump
-        if (Input.GetButton("Jump") && characterController.isGrounded)
+        if (Input.GetButton("Jump") && _characterController.isGrounded)
         {
-            moveDirection.y = jumpPower;
-            isJumping = true;
-            animator.SetBool("isJumping", isJumping);
+            _moveDirection.y = _jumpPower;
+            _isJumping = true;
+            _animator.SetBool("isJumping", _isJumping);
         }
-        else if (characterController.isGrounded)
+        else if (_characterController.isGrounded)
         {
-            isJumping = false;
-            animator.SetBool("isJumping", isJumping);
+            _isJumping = false;
+            _animator.SetBool("isJumping", _isJumping);
         }
 
         else
         {
-            moveDirection.y = moveDirectionY;
+            _moveDirection.y = moveDirectionY;
         }
 
-        if(!characterController.isGrounded)
+        if(!_characterController.isGrounded)
         {
-            moveDirection.y -= gravity * Time.deltaTime;
+            _moveDirection.y -= gravity * Time.deltaTime;
         }
 
         //Camera
-        characterController.Move(moveDirection * Time.deltaTime);
-        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        _characterController.Move(_moveDirection * Time.deltaTime);
+        _rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+        _rotationX = Mathf.Clamp(_rotationX, -lookXLimit, lookXLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(_rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+    }
+
+    public void RefreshStats()
+    {
+        _walkSpeed = statManager.GetStat(EStatType.WalkSpeed);
+        _runSpeed = statManager.GetStat(EStatType.RunSpeed);
+        _jumpPower = statManager.GetStat(EStatType.JumpPower);
     }
 }
