@@ -1672,7 +1672,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3022,7 +3022,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3341,7 +3341,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -4016,7 +4016,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -4442,7 +4442,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -5580,11 +5580,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1768680277158614759, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
-        type: 3}
-      propertyPath: gravity
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4288872723651809990, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
         type: 3}
       propertyPath: m_Name
@@ -5661,6 +5656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StaticShared
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596862683754414459, guid: 4c83d57170ed9b14188cb48cc530ccd1,
+        type: 3}
+      propertyPath: levelIndex
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

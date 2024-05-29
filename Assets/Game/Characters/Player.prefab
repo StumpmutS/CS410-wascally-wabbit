@@ -347,7 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statManager: {fileID: 8532087247054454371}
   playerCamera: {fileID: 8290223411745377540}
-  gravity: 14
+  gravity: 10
   lookSpeed: 10
   lookXLimit: 45
 --- !u!114 &8532087247054454371

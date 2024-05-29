@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.54585737, g: 0.55072165, b: 0.52059877, a: 1}
+  m_IndirectSpecularColor: {r: 0.5460199, g: 0.55096483, b: 0.5206779, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1337,12 +1337,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a3adfddac04306992e0d317a480a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCount: 2
+  levelCount: 3
   menuSceneIndex: 0
-  progressionSceneIndex: 3
+  progressionSceneIndex: 1
   levelSceneIndexes:
-    keys: 0000000001000000
-    values: 0100000002000000
+    keys: 000000000100000002000000
+    values: 020000000300000004000000
 --- !u!4 &661072903
 Transform:
   m_ObjectHideFlags: 0
@@ -1646,7 +1646,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -2617,6 +2617,13 @@ MonoBehaviour:
       upgrade: {fileID: 11400000, guid: ef7f8fc1edc5522498fb5da0dc8a6ca2, type: 2}
     - name: Enormous Calves
       upgrade: {fileID: 11400000, guid: a114ec388df636642888a5ac0fb650aa, type: 2}
+  - List:
+    - name: Speed Walker
+      upgrade: {fileID: 11400000, guid: 89428359e47ecc047bf3f9c4c62b9ee6, type: 2}
+    - name: Massive Quads
+      upgrade: {fileID: 11400000, guid: ef7f8fc1edc5522498fb5da0dc8a6ca2, type: 2}
+    - name: Enormous Calves
+      upgrade: {fileID: 11400000, guid: a114ec388df636642888a5ac0fb650aa, type: 2}
 --- !u!4 &1129330948
 Transform:
   m_ObjectHideFlags: 0
@@ -2971,7 +2978,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3265,7 +3272,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3915,7 +3922,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -4316,7 +4323,7 @@ PrefabInstance:
     - target: {fileID: 7848592888600611397, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: OnTargetHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteLevel
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8186279266533304293, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -5447,11 +5454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768680277158614759, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
-        type: 3}
-      propertyPath: gravity
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4288872723651809990, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
         type: 3}
