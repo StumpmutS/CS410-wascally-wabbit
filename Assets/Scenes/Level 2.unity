@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0917071, g: 0.04420908, b: 0.00518387, a: 1}
+  m_IndirectSpecularColor: {r: 0.0917076, g: 0.0442093, b: 0.0051838905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1461,7 +1461,7 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseNum
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -1476,12 +1476,12 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseReset
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1365959508000645552, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: searchRadius
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -2811,7 +2811,7 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseNum
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -2826,12 +2826,12 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseReset
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1365959508000645552, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: searchRadius
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3130,7 +3130,7 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseNum
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3145,12 +3145,12 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseReset
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1365959508000645552, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: searchRadius
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3805,7 +3805,7 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseNum
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -3820,12 +3820,12 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseReset
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1365959508000645552, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: searchRadius
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -4231,7 +4231,7 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseNum
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
@@ -4246,12 +4246,12 @@ PrefabInstance:
     - target: {fileID: 276649612975482236, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: pauseReset
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1365959508000645552, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: searchRadius
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}

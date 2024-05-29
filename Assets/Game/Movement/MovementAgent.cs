@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MovementAgent : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MovementAgent : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
 
     private bool _pathSet;
+    private Scene scene;
     private bool hasBeenShot = false;
     private bool canBeShot = true;
     public float timePause = 5;
@@ -18,6 +20,10 @@ public class MovementAgent : MonoBehaviour
     public float speedNum = 5;
     
     public UnityEvent<MovementAgent> OnDestinationReached = new();
+
+    void Start(){
+        scene = SceneManager.GetActiveScene();
+    }
     
     public void SetDestination(Vector3 point)
     {
@@ -36,6 +42,7 @@ public class MovementAgent : MonoBehaviour
             timePause -= Time.deltaTime;
             if (timePause <= 0)
             {
+                if(scene.name == "Level 3") speedNum += 1;
                 timePause = timeNum;
                 agent.speed = speedNum;
                 hasBeenShot = false;
