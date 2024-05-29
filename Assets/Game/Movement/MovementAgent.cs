@@ -12,7 +12,10 @@ public class MovementAgent : MonoBehaviour
     private bool hasBeenShot = false;
     private bool canBeShot = true;
     public float timePause = 5;
+    public float timeNum = 5;
     public float pauseReset = 5;
+    public float pauseNum = 5;
+    public float speedNum = 5;
     
     public UnityEvent<MovementAgent> OnDestinationReached = new();
     
@@ -33,8 +36,8 @@ public class MovementAgent : MonoBehaviour
             timePause -= Time.deltaTime;
             if (timePause <= 0)
             {
-                timePause = 5;
-                agent.speed = 5;
+                timePause = timeNum;
+                agent.speed = speedNum;
                 hasBeenShot = false;
                 canBeShot = false;
             }
@@ -44,7 +47,7 @@ public class MovementAgent : MonoBehaviour
             pauseReset -= Time.deltaTime;
             if (pauseReset <= 0)
             {
-                pauseReset = 5;
+                pauseReset = pauseNum;
                 canBeShot = true;
             }
         }
