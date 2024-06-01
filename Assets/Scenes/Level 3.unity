@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.05660379, g: 0.053946514, b: 0.05153081, a: 1}
+  m_FogColor: {r: 0.047169805, g: 0.03663604, b: 0.032707363, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.05
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.118903525, g: 0.12797141, b: 0.1509434, a: 1}
+  m_SubtractiveShadowColor: {r: 0.21933961, g: 0.24675708, b: 0.2924528, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ae46e5f32e04e8c46871826bf22cfd03, type: 2}
   m_HaloStrength: 0
   m_FlareStrength: 0
@@ -2053,13 +2053,13 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9433962, g: 0.75793666, b: 0.45834818, a: 1}
-  m_Intensity: 1.25
-  m_Range: 10
-  m_SpotAngle: 43.489075
-  m_InnerSpotAngle: 35.291153
+  m_Intensity: 8.24
+  m_Range: 50
+  m_SpotAngle: 44.837986
+  m_InnerSpotAngle: 38.09345
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
