@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.54585737, g: 0.55072165, b: 0.52059877, a: 1}
+  m_IndirectSpecularColor: {r: 0.5460199, g: 0.55096483, b: 0.5206779, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4375,6 +4375,80 @@ CapsuleCollider:
   m_Height: 1.0382004
   m_Direction: 1
   m_Center: {x: -0.16415405, y: 0.49056625, z: 0.0415802}
+--- !u!1001 &1562676277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 227104756133714446, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: pauseMenuPrefab
+      value: 
+      objectReference: {fileID: 6459187832746742051, guid: 5f970da3c93a74e53ac69be2130ccff4,
+        type: 3}
+    - target: {fileID: 5344229290547366891, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Pause Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 412.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 234.20001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112410419747062337, guid: 942980bc220054746a5f6c2a33a1d0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 942980bc220054746a5f6c2a33a1d0b5, type: 3}
 --- !u!1 &1570231686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9062233756716244190, guid: 8383e1ddb85a97f4880d13656c856c3c,
@@ -5914,3 +5988,4 @@ SceneRoots:
   - {fileID: 576957663333863639}
   - {fileID: 5571413916805540016}
   - {fileID: 1659428891}
+  - {fileID: 1562676277}
