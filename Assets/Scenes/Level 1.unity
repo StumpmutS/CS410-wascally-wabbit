@@ -1434,6 +1434,7 @@ MonoBehaviour:
   levelCount: 3
   menuSceneIndex: 0
   progressionSceneIndex: 1
+  gameoverSceneIndex: 5
   levelSceneIndexes:
     keys: 000000000100000002000000
     values: 020000000300000004000000
@@ -6022,6 +6023,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892550227050518593, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892550227050518593, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.064166665
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892550227050518593, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288872723651809990, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
         type: 3}
