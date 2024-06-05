@@ -15,9 +15,6 @@ public class FPSControl : MonoBehaviour
     [SerializeField] private float lookXLimit = 45f;
     [SerializeField] private AudioClip walkingsound;
     [SerializeField] private float sprintTime = 5f;
-    
-    private Animator _animator;
-    private CharacterController _characterController;
 
     private float _sprintMeter;
     

@@ -25,13 +25,21 @@ public class LevelManager : Singleton<LevelManager>
         
         CurrentLevelIndex++;
 
-        SceneManager.LoadScene(CurrentLevelIndex >= levelCount ? victorySceneIndex : progressionSceneIndex);
+        int loadingIndex = progressionSceneIndex;
+        if (CurrentLevelIndex >= levelCount)
+        {
+            loadingIndex = victorySceneIndex;
+            CurrentLevelIndex = 0;
+        }
+        
+        SceneManager.LoadScene(loadingIndex);
     }
 
     public void RestartLevel(int index)
     {
         if (index != CurrentLevelIndex) return;
-        
+
+        CurrentLevelIndex = 0;
         SceneManager.LoadScene(gameoverSceneIndex);
     }
 
