@@ -263,9 +263,10 @@ MonoBehaviour:
   statManager: {fileID: 8532087247054454371}
   playerCamera: {fileID: 8290223411745377540}
   gravity: 10
-  lookSpeed: 10
+  lookSpeed: 4
   lookXLimit: 45
   walkingsound: {fileID: 8300000, guid: 16b7d4c79a8f6af459c231cd16c9e0c4, type: 3}
+  runningPitch: 1.25
   sprintTime: 2
 --- !u!114 &8532087247054454371
 MonoBehaviour:
