@@ -8,6 +8,7 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private int menuSceneIndex;
     [SerializeField] private int progressionSceneIndex;
     [SerializeField] private int gameoverSceneIndex;
+    [SerializeField] private int victorySceneIndex;
     [SerializeField] private SerializableDictionary<int, int> levelSceneIndexes;
     
     public int CurrentLevelIndex { get; private set; }
@@ -24,7 +25,7 @@ public class LevelManager : Singleton<LevelManager>
         
         CurrentLevelIndex++;
 
-        SceneManager.LoadScene(CurrentLevelIndex >= levelCount ? menuSceneIndex : progressionSceneIndex);
+        SceneManager.LoadScene(CurrentLevelIndex >= levelCount ? victorySceneIndex : progressionSceneIndex);
     }
 
     public void RestartLevel(int index)

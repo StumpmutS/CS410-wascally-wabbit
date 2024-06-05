@@ -936,7 +936,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a14e21df5d83c54e9600c5b6560cfc3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bea033a1bb6fc8540947b09d7f1d7135, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1629,6 +1629,8 @@ MonoBehaviour:
   levelCount: 2
   menuSceneIndex: 0
   progressionSceneIndex: 3
+  gameoverSceneIndex: 5
+  victorySceneIndex: 6
   levelSceneIndexes:
     keys: 0000000001000000
     values: 0100000002000000
