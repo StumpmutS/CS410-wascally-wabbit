@@ -28,7 +28,7 @@ public class ScoreManager : Singleton<ScoreManager>
 
     public void UpdateScore()
     {
-        scoreTxt.text = Current.ToString() + "/" + win.ToString();
+        if (scoreTxt != null) scoreTxt.text = Current.ToString() + "/" + win.ToString();
         if (_current == win) OnScoreFinish.Invoke();
     }
 }

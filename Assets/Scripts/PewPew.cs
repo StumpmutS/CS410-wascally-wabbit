@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 
@@ -10,9 +12,18 @@ public class PewPew : MonoBehaviour
     public AudioClip shootingSound;
     private AudioSource audioSource;
 
-    void Start()
+    private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    IEnumerator Start()
+    {
+        // I don't know why this works, fixes bullet spawning issue
+        yield return new WaitForSeconds(.01f);
+        enabled = !enabled;
+        yield return new WaitForEndOfFrame();
+        enabled = !enabled;
     }
 
     // Update is called once per frame
