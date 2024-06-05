@@ -13,12 +13,18 @@ public class FPSControl : MonoBehaviour
     [SerializeField] private float gravity = 10f;
     [SerializeField] private float lookSpeed = 8f;
     [SerializeField] private float lookXLimit = 45f;
+    [SerializeField] private AudioClip walkingsound;
     [SerializeField] private float sprintTime = 5f;
     
     private Animator _animator;
     private CharacterController _characterController;
 
     private float _sprintMeter;
+    
+    private Animator _animator;
+    private CharacterController _characterController;
+    private AudioSource _audioSource;
+    
     private float _rotationX;
     private float _walkSpeed;
     private float _runSpeed;
@@ -36,6 +42,14 @@ public class FPSControl : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
+
+        //audio initialization
+        _audioSource = GetComponent<AudioSource>();
+        if(walkingsound != null)
+        {
+            _audioSource.clip = walkingsound;
+            _audioSource.loop = true;
+        }
         
         //animation initialization
         _animator = GetComponent<Animator>();
@@ -103,6 +117,16 @@ public class FPSControl : MonoBehaviour
         _rotationX = Mathf.Clamp(_rotationX, -lookXLimit, lookXLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(_rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+    
+        //audio
+        if(isWalking && !_isJumping && !_audioSource.isPlaying)
+        {
+            _audioSource.Play();
+        }
+        else if((!isWalking || _isJumping) && _audioSource.isPlaying)
+        {
+            _audioSource.Pause();
+        }
     }
 
     public void RefreshStats()
