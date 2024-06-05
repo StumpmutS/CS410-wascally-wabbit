@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System;
 using System.Diagnostics;
 /*Credit: https://github.com/dustinmorman/FPSControllerTutorial*/
@@ -14,6 +15,7 @@ public class FPSControl : MonoBehaviour
     [SerializeField] private float lookSpeed = 8f;
     [SerializeField] private float lookXLimit = 45f;
     [SerializeField] private AudioClip walkingsound;
+    [SerializeField] private float runningPitch = 1.25f;
     [SerializeField] private float sprintTime = 5f;
 
     private float _sprintMeter;
@@ -123,6 +125,16 @@ public class FPSControl : MonoBehaviour
         else if((!isWalking || _isJumping) && _audioSource.isPlaying)
         {
             _audioSource.Pause();
+        }
+
+        //running audio
+        if(isRunning)
+        {
+            _audioSource.pitch = runningPitch;
+        }
+        else
+        {
+            _audioSource.pitch = 1.0f;
         }
     }
 

@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-4848998287551001940
+--- !u!43 &-3843390427408657401
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Radish LOD1
+  m_Name: Cube LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -151,8 +151,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.008911174, y: 0.17905748, z: 0.0063418597}
-    m_Extent: {x: 0.12942752, y: 0.25285766, z: 0.14399172}
+    m_Center: {x: 0, y: -1.7971451, z: 0}
+    m_Extent: {x: 2.8395061, y: 2.4514644, z: 2.8395061}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e927627221206e04dba83232f13d1949, type: 3}
-  m_Name: Radish_lods
+  m_Name: Hook_lods
   m_EditorClassIdentifier: 
   overrideDefaults: 0
   importSettings:
@@ -186,23 +186,23 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 2300000, guid: 5a4e704c4d6348244957a4278d5d803d, type: 3}
+  - {fileID: -7511558181221131132, guid: 40232649dfef2ac4f9c72efedfc6c7bd, type: 3}
   lod1:
-  - {fileID: 2489595191757828136, guid: 5a4e704c4d6348244957a4278d5d803d, type: 3}
+  - {fileID: 9055220443472708374, guid: 40232649dfef2ac4f9c72efedfc6c7bd, type: 3}
   lod2:
-  - {fileID: 802670852950336901, guid: 5a4e704c4d6348244957a4278d5d803d, type: 3}
+  - {fileID: 7095795314921212099, guid: 40232649dfef2ac4f9c72efedfc6c7bd, type: 3}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &8440957728418036551
+--- !u!43 &4855900542337190350
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Radish LOD2
+  m_Name: Cube LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -347,8 +347,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.008911174, y: 0.17905748, z: 0.0063418597}
-    m_Extent: {x: 0.12942752, y: 0.25285766, z: 0.14399172}
+    m_Center: {x: 0, y: -1.7971451, z: 0}
+    m_Extent: {x: 2.8395061, y: 2.4514644, z: 2.8395061}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
