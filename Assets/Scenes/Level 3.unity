@@ -1634,6 +1634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50da5e8c486501541ad300c709fb8eeb, type: 3}
+    - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
+        type: 3}
       propertyPath: rolloffMode
       value: 2
       objectReference: {fileID: 0}
@@ -3168,6 +3173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50da5e8c486501541ad300c709fb8eeb, type: 3}
+    - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
+        type: 3}
       propertyPath: rolloffMode
       value: 2
       objectReference: {fileID: 0}
@@ -3498,6 +3508,11 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50da5e8c486501541ad300c709fb8eeb, type: 3}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: rolloffMode
@@ -4226,6 +4241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50da5e8c486501541ad300c709fb8eeb, type: 3}
+    - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
+        type: 3}
       propertyPath: rolloffMode
       value: 2
       objectReference: {fileID: 0}
@@ -4689,6 +4709,11 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50da5e8c486501541ad300c709fb8eeb, type: 3}
     - target: {fileID: 5454494069737555365, guid: 1988418bcbbd1184d99e8aba25ee9c64,
         type: 3}
       propertyPath: rolloffMode
