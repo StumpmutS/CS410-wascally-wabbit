@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,11 @@ public class ScoreManager : Singleton<ScoreManager>
     }
 
     public UnityEvent OnScoreFinish = new();
+
+    private void Start()
+    {
+        UpdateScore();
+    }
 
     public void UpdateScore()
     {

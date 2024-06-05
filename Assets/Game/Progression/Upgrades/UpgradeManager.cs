@@ -30,4 +30,9 @@ public class UpgradeManager : Singleton<UpgradeManager>
         // Again, don't change to HashSet, this is not a hot path
         if (!_selectedUpgrades.Contains(upgrade)) _selectedUpgrades.Add(upgrade); 
     }
+
+    public void Reset()
+    {
+        _selectedUpgrades.Clear();
+    }
 }
