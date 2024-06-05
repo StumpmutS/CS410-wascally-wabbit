@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Rabbit")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<DeathController>().Die();
             Destroy(gameObject);
             ScoreManager.Instance.Current += 1;
             ScoreManager.Instance.UpdateScore();

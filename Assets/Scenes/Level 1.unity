@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTxt: {fileID: 563203991}
-  win: 10
+  win: 4
   OnScoreFinish:
     m_PersistentCalls:
       m_Calls:
@@ -2986,11 +2986,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Catch all the rabbits before the timer runs out, and remember...
+  m_text: 'Catch all the rabbits before the timer runs out, they''ll be coming for
+    the vegetables!
 
 
-    Don''t
-    let the ghost catch you!'
+    Watch out for non-rabbits...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d52548bee8660d346a8dfa0d0ea64332, type: 2}
   m_sharedMaterial: {fileID: 9188231609311235530, guid: d52548bee8660d346a8dfa0d0ea64332,
@@ -4994,102 +4994,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 948215307500325496}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1641732024
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641732015}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 16b7d4c79a8f6af459c231cd16c9e0c4, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.075
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1659428890
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,16 +6110,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1768680277158614759, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
-        type: 3}
-      propertyPath: runningPitch
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768680277158614759, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
-        type: 3}
-      propertyPath: walkingsound
-      value: 
-      objectReference: {fileID: 8300000, guid: 16b7d4c79a8f6af459c231cd16c9e0c4, type: 3}
     - target: {fileID: 2331661103667648996, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6284,11 +6178,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4288872723651809990, guid: e2f24b8b0974c7a43a2a03bb5717ddc4,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641732024}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f24b8b0974c7a43a2a03bb5717ddc4, type: 3}
 --- !u!1001 &1180035267592224640
 PrefabInstance:
@@ -6435,6 +6325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StaticShared
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584676324626750651, guid: 4c83d57170ed9b14188cb48cc530ccd1,
+        type: 3}
+      propertyPath: reset
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
