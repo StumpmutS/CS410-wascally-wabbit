@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,6 +9,15 @@ public class PauseMenu : MonoBehaviour
     private bool isPaused;
     public GameObject pauseMenuPrefab;
     private GameObject pauseMenuInstance;
+    private FPSControl fpsControl;
+    private PewPew pewPew;
+
+
+    void Start()
+    {
+        fpsControl = FindObjectOfType<FPSControl>();
+        pewPew = FindObjectOfType<PewPew>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,6 +42,10 @@ public class PauseMenu : MonoBehaviour
             pauseMenuInstance.SetActive(false);
             Time.timeScale = 1f;
             isPaused = false;
+            fpsControl.enabled = true;
+            pewPew.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -48,15 +62,16 @@ public class PauseMenu : MonoBehaviour
         }
         Time.timeScale = 0f;
         isPaused = true;
+        fpsControl.enabled = false;
+        pewPew.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void LoadMenu()
     {
-
+        Resume();
+        SceneManager.LoadScene("MainMenu");
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }
