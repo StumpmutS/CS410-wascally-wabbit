@@ -27,6 +27,7 @@ public class MovementAgent : MonoBehaviour
     
     public void SetDestination(Vector3 point)
     {
+        point.y = Terrain.activeTerrain.SampleHeight(point);
         agent.SetDestination(point);
     }
 

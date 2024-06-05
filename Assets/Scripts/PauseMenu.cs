@@ -49,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void Pause()
+    public void Pause()
     {
         if(pauseMenuInstance == null)
         {
